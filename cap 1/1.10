@@ -1,0 +1,41 @@
+Probar que la implementación de bubble sort es correcta:
+
+bubblesort(A)
+    for i from n to 1
+        for j from 1 to i - 1
+            if (A[j] > A[j+1])
+                sqap the values of A[j] and A[j + 1]
+
+
+Para el loop interior:
+
+Ciclo invariante:
+    Los elementos del sub array A[1, ..., j + 1] no cambian, posiblemente cambien de orden.
+    El elemento del A[j + 1] es el más grande del arreglo.
+
+Inicialización: 
+    El sub arreglo A[1, ... , j + 1] no asegura tener los elementos ordenados. Los elementos de 
+    A[j+2, ... , n] son todos mayores que  A[1, ... , j + 1]
+
+Mantenimiento:
+    Se compara A[j] con A[j+1] y se hace un swap asegurando que A[j] es el menor, el tamaño del sub arreglo A[1, ..., j + 1]
+    disminuye en 1
+
+Terminación
+    El loop temrina cuando j = i - 1 y asegura que elemento A[i] es elemento más pequeño del arreglo A[i, ..., n]
+
+Para el loop exterior:
+
+Ciclo invariante:
+    Los elementos del sub array A[i, .., n] tiene los mismo elementos, pero posiblemente en otro orden.
+    Contiene los n - i elementos más grandes del arreglo.
+
+Inicialización:
+El subarray solo tiene el elemento A[n]
+
+Mantenimiento:
+    El sub array A[i, ..., n] tiene los n - i elementos más grandes ordenados y son mayor que los A[1, ... ,i - 1].
+    Al final del ciclo, A[i - 1, ..., n] son los más grandes y están ordendas y los A[1, ... i -2] no .
+
+Terminación:
+    Cuando i = 1 A[1, ..., n] está ordenado

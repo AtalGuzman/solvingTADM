@@ -1,0 +1,21 @@
+Probar que el siguiente algoritmo es correcto:
+
+multiply(y, z):
+    if (z = 0) then return 0 
+    else return multiplit(cy, floor(z/c)) + y zmod(c)
+
+para todo c >= 2
+
+PDQ multiply es correcto
+Para z = 0, m(y, z) = 0, entonces es correcto
+Se asume que para z = n - 1, multiplit(y, n - 1) = y n - 1
+
+Para z = n
+    multiply(y, n)
+    => multiply(cy, floor(n/c)) + y n mod c
+    Por hipótesis 
+    => cy floor(n/c) + y n mod c
+    => y (c flor(n/c) + n mod c)
+    => y * n
+
+Por lo tanto, multiply es correcto.

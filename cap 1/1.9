@@ -1,0 +1,15 @@
+Probar que la evaluación de polinomios de Horner es correcta.
+
+Para A = [a_0], x > 0 retorna a_0
+
+Se asume que para A = [a_0, ..., a_(n-1)] retorna 
+    (...(a_(n-1) x  + a_(n-2))x + a_0
+
+Para A = [a_0, ..., a_n]
+    => (...(a_n x + a_(n-1))x + a_(n_2)) + a_0
+    => (...(a_n x ^ 2 + a_(n-1)x + a_(n_2)) + a_0
+    Por hipótesis
+    => a_n x ^ n + horner(A[0, n -1], x)
+    => a_n x ^ n + a_(n-1) x ^ (n-1) + a_(n-2) x ^ (n-2) + ... + a_0 / evaluación correcta en el polinomio
+
+Por lo tanto Horner es correcto.

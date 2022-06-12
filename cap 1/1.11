@@ -1,0 +1,17 @@
+Probar que la igualdad de Euclides gcd(x, y) = gcd(y, x mod y), donde gcd es el máximo común divisor, es correcta.
+
+sea x = qy + r y m = :
+    => r = x - qy / dado que r es un combinación lineal de x e y y ambos son divisibles por gcd(x, y), r también lo es
+    
+entonces  gcd (x, r) = gcd(y, r) = gdc(x,y)
+
+Si se escoge q convenientemente como la división entera de q:
+    => r = x mod y
+
+luego gcd (x, x mod y) = gcd(y, x mod y) = gdc(x,y)
+
+Manteniendo las igualdades pertinentes para esta demostración queda que:
+
+gcd(x, y) = gcd(y, x mod y)
+
+Por lo tanto, el algoritmo de Euclides es correcto.
